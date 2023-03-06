@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/main.css">
+
+</head>
+
+<body>
+
+    <div class="timer">1:00</div>
+
+    <form name="form">
+        <input type="button" class="start" value="Start game!">
+        <input type="button" disabled class="check" value="Check result">
+        <input type="button" class="new" value="New game">
+    </form>
+
+    <div class="puzzle">
+        <div class="sort puzzle__left"></div>
+        <div class="puzzle__rigth">
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+            <div class="puzzle__rigth__place sort"></div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__ask">
+            <div>
+                <p class="modal__time">You still have time, you sure? 1:00</p>
+            </div>
+            <form action="modalForm">
+                <input type="button" class="modal__close" value="Close">
+                <input type="button" class="modal__check" value="Check">
+            </form>
+        </div>
+        <div class="modal__lose">
+            <div>
+                <p>It's a pity, but you lost</p>
+                <div class="modal__lose__wrap">
+                    <input type="button" class="modal__lose__close" value="Close">
+                </div>
+            </div>
+        </div>
+        <div class="modal__win">
+            <div>
+                <p>Woohoo, well done, you did it!</p>
+                <div class="modal__win__wrap">
+                    <input type="button" class="modal__win__close" value="Close">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>

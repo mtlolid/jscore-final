@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin flex($fd, $jc, $ai, $fw, $g) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;
+    gap: $g;
+}
+
+body {
+    @include size(100vw, 100vh);
+    @include flex(column, space-around, center, nowrap, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.disabled {
+    background-color: #ED8782 !important;
+}
+
+.timer {
+    font-size: 5rem;
+}
+
+form[name='form'] {
+    input {
+        @include size(100px, 30px);
+        background-color: #E74642;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .check {
+        background-color: #EF8683;
+    }
+}
+
+.puzzle {
+    @include flex(row, center, center, nowrap, 10px);
+    
+    &__left,
+    &__rigth {
+        @include size(280px, 280px);
+        display: grid;
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: repeat(4, 70px);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        box-shadow: -10px 5px 5px 0px rgba(0,0,0,0.75);
+        outline: 1px solid #000;
+
+        &__number {
+            @include size(70px, 70px);
+            color: transparent;
+        }
+
+        &__place{
+            @include size(70px, 70px);
+            overflow: visible;
+        }
+    }
+
+    
+
+}
+
+.modal {
+    @include size(100vw, 100vh);
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+
+    // Перевірка
+
+    &__ask {
+        @include size(50%, 30%);
+        @include flex(column, space-evenly, center, nowrap, 0);
+        display: none;
+        margin: 10% auto;
+        background-color: white;
+        border-radius: 5px;
+
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input {
+            @include size(70px, 30px);
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+
+    &__close {
+        background-color: red;
+    }
+
+    &__check {
+        background-color: green;
+    }
+
+    // Програш
+
+    &__lose {
+        @include size(50%, 30%);
+        @include flex(column, space-evenly, center, nowrap, 0);
+        display: none;
+        margin: 10% auto;
+        background-color: white;
+        border-radius: 5px;
+
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &__wrap {
+            @include flex(row, center, center, nowrap, 0);
+            margin-top: 30px;
+        }
+
+        input {
+            @include size(70px, 30px);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            background-color: red;
+        }
+    }
+
+    // Виграш
+
+    &__win {
+        @include size(50%, 30%);
+        @include flex(column, space-evenly, center, nowrap, 0);
+        display: none;
+        margin: 10% auto;
+        background-color: white;
+        border-radius: 5px;
+
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &__wrap {
+            @include flex(row, center, center, nowrap, 0);
+            margin-top: 30px;
+        }
+
+        input {
+            @include size(70px, 30px);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            background-color: red;
+        }
+    }
+
+
+}
+
+// Фото
+
+.pic1 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 0% 0%;
+}
+
+.pic2 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 33.3% 0%;
+}
+
+.pic3 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 66.6% 0%;
+}
+
+.pic4 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 100% 0%;
+}
+
+.pic5 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 0% 27%;
+}
+
+.pic6 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 33.3% 27%;
+}
+
+.pic7 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 66.6% 27%;
+}
+
+.pic8 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 100% 27%;
+}
+
+.pic9 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 0% 54%;
+}
+
+.pic10 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 33.3% 54%;
+}
+
+.pic11 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 66.6% 54%;
+}
+
+.pic12 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 100% 54%;
+}
+
+.pic13 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 0% 81%;
+}
+
+.pic14 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 33.3% 81%;
+}
+
+.pic15 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 66.6% 81%;
+}
+
+.pic16 {
+    background-image: url('580b57fcd9996e24bc43c4df.png');
+    background-size: 400%;
+    background-position: 100% 81%;
+}
